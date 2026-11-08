@@ -1,9 +1,0 @@
-CREATE TABLE IF NOT EXISTS appointments (
-    id SERIAL PRIMARY KEY,
-    appointment_date DATE NOT NULL,
-    appointment_time TIME NOT NULL,
-    doctor VARCHAR(120) NOT NULL,
-    service VARCHAR(120) NOT NULL,
-    available BOOLEAN NOT NULL DEFAULT TRUE,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);

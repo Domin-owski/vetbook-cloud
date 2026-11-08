@@ -204,3 +204,130 @@ main { min-height: 100vh; }
   .slot { grid-template-columns: 52px 1fr; }
   .reserve-button { grid-column: 1 / -1; width: 100%; }
 }
+.status-message {
+  margin-bottom: 16px;
+  padding: 13px 16px;
+  border: 1px solid #cbd8df;
+  border-radius: 10px;
+  color: #17324d;
+  background: white;
+  font-weight: 700;
+}
+
+.success-message {
+  color: #12634f;
+  border-color: #9fd7c7;
+  background: #e6f7f1;
+}
+
+.error-message {
+  color: #9b2c2c;
+  border-color: #efb4b4;
+  background: #fff0f0;
+}
+
+.appointment-form-card {
+  margin-bottom: 24px;
+  padding: 24px;
+  border: 1px solid #d8e2e8;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 14px 40px rgba(23, 50, 77, 0.08);
+}
+
+.appointment-form-card h3 {
+  margin: 5px 0 20px;
+  color: #17324d;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+  gap: 16px;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 7px;
+  color: #526674;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.form-grid input[type="text"],
+.form-grid input[type="date"],
+.form-grid input[type="time"],
+.form-grid select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd8df;
+  border-radius: 9px;
+  color: #17324d;
+  background: white;
+}
+
+.form-grid small {
+  color: #b42318;
+}
+
+.checkbox-field {
+  display: flex !important;
+  align-items: center;
+  grid-column: span 2;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  grid-column: span 2;
+  justify-content: flex-end;
+}
+
+.form-actions button,
+.edit-button,
+.delete-button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.form-actions button {
+  color: white;
+  background: #1f8a70;
+}
+
+.secondary-button,
+.edit-button {
+  color: #17324d !important;
+  background: #e8eef2 !important;
+}
+
+.delete-button {
+  color: #9b2c2c;
+  background: #fde8e8;
+}
+
+.slot-actions {
+  display: grid;
+  gap: 7px;
+}
+
+@media (max-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-field,
+  .form-actions {
+    grid-column: auto;
+  }
+}

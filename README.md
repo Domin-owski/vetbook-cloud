@@ -18,7 +18,7 @@ VetBook Cloud to chmurowy system kalendarza i rezerwacji wizyt weterynaryjnych. 
 - Frontend: React + Vite,
 - Backend: Node.js + Express,
 - Baza danych: PostgreSQL,
-- Chmura: AWS,
+- Chmura: Microsoft Azure,
 - Komunikacja: REST API.
 
 ## Architektura

@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "date": "2026-11-12",
+    "time": "09:00",
+    "doctor": "lek. wet. Anna Kowalska",
+    "service": "Konsultacja ogólna",
+    "available": true
+  },
+  {
+    "id": 2,
+    "date": "2026-11-12",
+    "time": "10:30",
+    "doctor": "lek. wet. Anna Kowalska",
+    "service": "Szczepienie",
+    "available": false
+  },
+  {
+    "id": 3,
+    "date": "2026-11-13",
+    "time": "12:00",
+    "doctor": "lek. wet. Piotr Nowak",
+    "service": "Badanie kontrolne",
+    "available": true
+  },
+  {
+    "id": 4,
+    "date": "2026-11-14",
+    "time": "14:30",
+    "doctor": "lek. wet. Piotr Nowak",
+    "service": "Konsultacja dermatologiczna",
+    "available": false
+  },
+  {
+    "id": 5,
+    "date": "2026-11-14",
+    "time": "16:00",
+    "doctor": "lek. wet. Piotr Nowak",
+    "service": "Badanie kontrolne",
+    "available": false
+  },
+  {
+    "id": 6,
+    "date": "2026-11-17",
+    "time": "08:30",
+    "doctor": "lek. wet. Anna Kowalska",
+    "service": "Szczepienie",
+    "available": true
+  },
+  {
+    "id": 7,
+    "date": "2026-11-17",
+    "time": "11:00",
+    "doctor": "lek. wet. Anna Kowalska",
+    "service": "Konsultacja ogólna",
+    "available": true
+  },
+  {
+    "id": 8,
+    "date": "2026-11-21",
+    "time": "10:00",
+    "doctor": "lek. wet. Piotr Nowak",
+    "service": "Badanie kontrolne",
+    "available": false
+  }
+]

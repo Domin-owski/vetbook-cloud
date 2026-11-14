@@ -1,0 +1,10 @@
+title = "VetBook Cloud"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "vetbook-demo-secret"
+description = "Sekret do sprawdzenia blokady CI"
+regex = '''VETBOOK_DEMO_SECRET_[A-Za-z0-9]{32}'''
+keywords = ["VETBOOK_DEMO_SECRET_"]

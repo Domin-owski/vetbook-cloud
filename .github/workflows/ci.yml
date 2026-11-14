@@ -188,7 +188,7 @@ jobs:
       - name: Zbuduj frontend VetBook
         working-directory: frontend
         env:
-          VITE_API_URL: 'https://vetbook-api-61698-hjgsh5dwb5fcgpdn.norwayeast-01.azurewebsites.net/api'
+          VITE_API_BASE_URL: 'https://vetbook-api-61698-hjgsh5dwb5fcgpdn.norwayeast-01.azurewebsites.net/api'
         run: |
           npm ci
           npm run build

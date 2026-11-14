@@ -169,3 +169,41 @@ jobs:
           app-name: vetbook-api-61698
           package: ./backend
           startup-command: node src/server.js
+  deploy-frontend:
+    name: Deploy frontend to Azure
+    needs: build-test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Zbuduj frontend VetBook
+        working-directory: frontend
+        env:
+          VITE_API_URL: 'https://vetbook-api-61698-hjgsh5dwb5fcgpdn.norwayeast-01.azurewebsites.net/api'
+        run: |
+          npm ci
+          npm run build
+          test -f dist/index.html
+
+      - name: Zaloguj się do Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Wdróż frontend VetBook
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: vetbook-web-61698
+          package: ./frontend/dist
+          startup-command: pm2 serve /home/site/wwwroot --no-daemon --spa
